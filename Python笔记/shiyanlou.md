@@ -224,4 +224,3 @@ if i in range(10):
 1. 删除 .idea 目录下文件：git rm .idea / git rm -r dir
 2. commit：git commit -a -m‘remove .idea’
 3. push：git push -u origin master
-4. test
