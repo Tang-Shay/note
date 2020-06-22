@@ -25,3 +25,17 @@
   Built-in Function 内置函数，为了方便程序员快速编写脚本程序，只需要直接调用即可。
 
   在Python中输入`dir(__builtins__)`即可以看到列表，共有68个
+
+### 2. 用Python编写1~10中有几个奇数？
+
+```# 1~10中有几个奇数
+i = 1
+num = 0
+for i in range(11):
+    if i % 2 == 0:
+        continue
+    else:
+        num = num+1
+print("1~10中有{}个奇数".format(num))
+```
+
