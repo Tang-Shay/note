@@ -1,0 +1,27 @@
+# Python简答题（小甲鱼）
+
+
+
+## 第1讲
+
+
+
+### 1. Python是什么类型的语言？
+
+  脚本语言Scripting language，以简单的方式快速完成某些复杂的事情通常是创造脚本语言的重要原则。
+
+### 2. IDLE是什么？
+
+  IDLE是一个Python Shell，即外壳，也就是一个通过键入文本与程序交互的途径，利用IDLE这个shell和Python进行互动。
+
+
+
+## 第2讲
+
+
+
+### 1. 什么是BIF？Python3提供了多少个？
+
+  Built-in Function 内置函数，为了方便程序员快速编写脚本程序，只需要直接调用即可。
+
+  在Python中输入`dir(__builtins__)`即可以看到列表，共有68个
