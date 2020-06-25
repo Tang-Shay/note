@@ -71,7 +71,8 @@ print("1~10中有{}个奇数".format(num))
 
 编写程序前的流程：
 
-    加载背景音乐
+```
+	加载背景音乐
     播放背景音乐
     我方飞机诞生
     
@@ -99,10 +100,107 @@ print("1~10中有{}个奇数".format(num))
             修改我方飞机图案
             打印"Game Over"
             停止背景音乐（淡出）
+```
 
 
 
 ## 第6讲：列表和元组
 
 
+
+### 列表、元组、字符串的共同点：
+
+- 可以通过索引得到每一个元素；
+- 默认索引值 从0开始；
+- 可以通过 分片 的方法得到一个范围内的元素集合；
+- 有很多共同的操作符。
+
+### 迭代?
+
+
+
+## 第7讲 函数
+
+
+
+### 函数的创建和调用
+
+```
+# 创建
+def add(num1,num2):
+    sum = num1 + num2
+    print(sum)
+    
+# 调用
+add(1,3)
+```
+
+没有返回值，如果 temp = add(num1,num2) ,此时 print(temp) 返回None。
+
+### 函数的返回值
+
+```
+def add(num1,num2):
+    return (num1 + num2)
+    
+print(add(2,4))
+```
+
+### 关键字参数
+
+```
+def SaySome(name,words):
+    print(name + '->' + words)
+    
+SaySome(words = 'Love you.',name = 'Tang')
+```
+
+### 默认参数
+
+```
+def SaySome(name = 'Tang',words = 'Love you.'):
+    print(name + '->' + words)
+    
+SaySome()
+SaySome('Lei')
+```
+
+### 闭包closure
+
+```
+def FunX(x):
+    def FunY(y):
+        return x*y
+    return FunY
+```
+
+如果在一个内部函数 FunY() 里对外部作用域 FunX() （但不是在全局作用域）的变量 x 进行 引用 ，内部函数 FunY()就被认为是闭包。
+
+### 过滤函数filter()
+
+- 取0~9之间的奇数：
+
+  方法一：
+
+  ```
+  def odd(x):
+      return x % 2
+  
+  temp = range(10)
+  show = filter(odd,temp)
+  list(show)
+  ```
+
+  方法二：使用lambda
+  ```
+  list(filter(lambda x : x % 2,range(10)))
+  ```
+
+### 映射函数map()
+
+```
+list(map(lambda x : x*2, range(10)))
+```
+
+结果显示：[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 
